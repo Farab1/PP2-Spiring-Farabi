@@ -1,1 +1,1 @@
-print ("Hi KBTU dents ")
+print("Hello, World!")
