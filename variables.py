@@ -6,4 +6,4 @@ s="syllabus have "
 p="PP2 Spring's "
 f=40
 
-print (p,s,w,ww,"and",githubsubmission,defense,b)
+print (p,s,w,ww,"and",githubsubmission,defense)
