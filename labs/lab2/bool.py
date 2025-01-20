@@ -6,5 +6,5 @@ print(bool(b))
 
 if a>b:
     print('hello')
-    a-1
+
     
