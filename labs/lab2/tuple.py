@@ -4,8 +4,8 @@ y[2]='melon'
 y.append("orange")
 mytuple = tuple(y)
 
-(green,yellow,yellow,orange) = mytuple
-print(green,yellow,yellow,orange)
+(green,afric,yellow,orange) = mytuple
+print(green,afric,yellow,orange)
 
 for x in mytuple:
     print('fruits')
@@ -13,4 +13,4 @@ for x in mytuple:
 yourtuple = ('sugar','water','bread')
 
 ourtuple = mytuple+yourtuple
-print('total:', ourtuple.count)
+print('total:', ourtuple)
