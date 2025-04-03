@@ -1,6 +1,6 @@
 import json
 
-with open("j.json", "r") as file:
+with open("j.json" , "r") as file:
     data = json.load(file)
 
 print("Interface Status")

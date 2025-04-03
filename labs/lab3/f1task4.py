@@ -12,8 +12,7 @@ def filter_prime(a):
     return primel
 
 
-# Input as list of integers
-user_input = input("Enter numbers separated by spaces: ")
-num_list = list(map(int, user_input.split()))  # Convert input to list of integers
+user_input = input()
+num_list = list(map(int, user_input.split()))
 
-print("Prime numbers:", filter_prime(num_list))
+print("PRIME numbers:", filter_prime(num_list))
