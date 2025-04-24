@@ -1,12 +1,10 @@
-#Imports
 import pygame, sys # type: ignore
 from pygame.locals import * # type: ignore
 import random, time
 import pygame.transform # type: ignore
 
 from pygame.sprite import Group # type: ignore
- 
-#Initialzing 
+
 pygame.init()
  
 #Setting up FPS 
@@ -45,6 +43,8 @@ pygame.display.set_caption("Game")
 
 N = 0
 
+#backgronund music
+pygame.mixer.Sound(r"C:\Users\Asus\Downloads\bccc.wav").play(-1)
 
 class Enemy(pygame.sprite.Sprite):
       def __init__(self):
@@ -90,7 +90,7 @@ class Coin(pygame.sprite.Sprite):
         self.image = pygame.image.load(r"C:\Users\Asus\Downloads\coin.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH-40), 0)
-    
+        
     def move(self):
         self.rect.move_ip(0, SPEED)
 
@@ -126,7 +126,7 @@ def game_start():
         #Cycles through all events occurring  
         for event in pygame.event.get():
             
-            if event.type == QUIT: # type: ignore
+            if event.type == QUIT: 
                 pygame.quit()
                 sys.exit()
     
@@ -145,7 +145,7 @@ def game_start():
         if pygame.sprite.spritecollideany(P1, coins_group):
             a = random.randint(1, 4)# Randomly add 1 to 3 coins
             COINS_COUNTER += a
-            SPEED += a/100
+            SPEED += a/10
 
             entity.kill()  # remove the coin
 
@@ -162,7 +162,7 @@ def game_start():
 
         #To be run if collision occurs between Player and Enemy
         if pygame.sprite.spritecollideany(P1, enemies):
-            pygame.mixer.Sound(r'crash.wav').play()
+            pygame.mixer.Sound(r'C:\Users\Asus\Downloads\crash.wav').play()
             time.sleep(0.5)
                         
             DISPLAYSURF.fill(RED)
@@ -183,7 +183,7 @@ def game_start():
 intro = True
 while intro:
     for event in pygame.event.get():
-        if event.type == QUIT: # type: ignore
+        if event.type == QUIT: 
             pygame.quit()
             sys.exit()
     DISPLAYSURF.fill(WHITE)
@@ -191,18 +191,18 @@ while intro:
     DISPLAYSURF.blit(intro_text, (10, 250))
     pygame.display.update()
     keys = pygame.key.get_pressed()
-    if keys[K_4]: # type: ignore
+    if keys[K_4]: 
          N = 4
          game_start()
-    elif keys[K_5]: # type: ignore
-         N = 5  
+    elif keys[K_5]: 
+         N = 5 
          game_start()
-    elif keys[K_6]: # type: ignore
+    elif keys[K_6]: 
          N = 6
          game_start()
-    elif keys[K_7]: # type: ignore
+    elif keys[K_7]: 
          N = 7
          game_start()
-    elif keys[K_8]: # type: ignore
+    elif keys[K_8]:
          N = 8
          game_start()

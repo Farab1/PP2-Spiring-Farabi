@@ -1,7 +1,5 @@
 import pygame
 import os
-
-# Инициализация Pygame
 pygame.init()
 pygame.mixer.init()
 

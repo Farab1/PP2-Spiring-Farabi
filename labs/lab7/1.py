@@ -1,40 +1,3 @@
-'''import pygame
-import os
-
-_image_library = {}
-def get_image(path):
-        global _image_library
-        image = _image_library.get(path)
-        if image == None:
-                canonicalized_path = path.replace('/', os.sep).replace('\\', os.sep)
-                image = pygame.image.load(canonicalized_path)
-                _image_library[path] = image
-        return image
-
-pygame.init()
-x=20
-y=20
-screen = pygame.display.set_mode((400, 300))
-done = True
-clock = pygame.time.Clock()
-
-while  done:
-        for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                        done = False
-        pressed = pygame.key.get_pressed()
-        if pressed[pygame.K_UP]: y -= 3
-        if pressed[pygame.K_DOWN]: y += 3
-        if pressed[pygame.K_LEFT]: x -= 3
-        if pressed[pygame.K_RIGHT]: x += 3
-        
-        screen.fill((255, 255, 255))
-        
-        screen.blit(get_image('ball.png'), (x, y))
-        
-        pygame.display.flip()
-        clock.tick(60)'''
-
 import pygame
 from datetime import datetime
 import os
@@ -74,7 +37,7 @@ while done :
 
         screen.blit(clock, (0, 0))
 
-        minute_angle = minute * 7.5 
+        minute_angle = minute * 6 
         second_angle = second * 6  
 
         draw_hand(minute_hand, minute_angle, 0)  
