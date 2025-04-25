@@ -8,7 +8,7 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
-#1.search by template
+#1
 search_by_temp = '''
 CREATE OR REPLACE FUNCTION find_by_pattern(pattern TEXT)
 RETURNS TABLE(id INT, name TEXT, phone TEXT) AS $$

@@ -41,7 +41,7 @@ def delete_user():
     conn.commit()
 
 insert_manual()
-# insert from csv
+# insert_from_csv("data.csv")
 update_user()
 search_user()
 delete_user()
